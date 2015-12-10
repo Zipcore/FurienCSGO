@@ -30,6 +30,7 @@ public void OnPluginStart()
   HookEvent("round_end", Event_OnRoundEnd);
   HookEvent("player_spawn", Event_OnPlayerSpawn);
   HookEvent("player_death", Event_OnPlayerDeath);
+  HookEvent("player_team", Event_OnPlayerPreTeam, EventHookMode_Pre);
 }
 public void OnMapStart()
 {
@@ -70,4 +71,9 @@ public Action Event_OnPlayerDeath(Handle event, const char[] name, bool dontBroa
   //int victim = GetClientOfUserId(GetEventInt(event, "userid"));
   //int attacker = GetClientOfUserId(GetEventInt(event, "attacker"));
   return Plugin_Continue;
+}
+public Action Event_OnPlayerPreTeam(Handle event, const char[] name, bool dontbroadcast)
+{
+	dontbroadcast = true;
+	return Plugin_Changed;
 }
