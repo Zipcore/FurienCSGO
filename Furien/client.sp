@@ -17,7 +17,7 @@ stock bool IsClientAdmin(int client)
   }
   return false;
 }
-stock bool IsPlayerVIP(int client)
+stock bool IsClientVIP(int client)
 {
   if (GetAdminFlag(GetUserAdmin(client), Admin_Reservation))
   {
