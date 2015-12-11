@@ -46,9 +46,9 @@ public void OnPluginStart()
   HookEvent("player_team", Event_OnPlayerPreTeam, EventHookMode_Pre);
 
   for(int i; i < sizeof(g_sRadioCommands); i++)
-	{
-		AddCommandListener(Command_BlockRadio, g_sRadioCommands[i]);
-	}
+  {
+    AddCommandListener(Command_BlockRadio, g_sRadioCommands[i]);
+  }
 }
 public void OnMapStart()
 {
