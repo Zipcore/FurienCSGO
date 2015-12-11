@@ -4,6 +4,13 @@ public Action Event_OnRoundPreStart(Handle event, const char[] name, bool dontBr
 }
 public Action Event_OnRoundStart(Handle event, const char[] name, bool dontBroadcast)
 {
+  LoopAliveClients(i)
+  {
+    if(GetClientTeam(i) == CS_TEAM_CT)
+    {
+      Menu_SelectWeapon(i);
+    }
+  }
   return Plugin_Continue;
 }
 public Action Event_OnRoundEnd(Handle event, const char[] name, bool dontBroadcast)
