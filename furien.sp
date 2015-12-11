@@ -4,10 +4,9 @@
 #include <sdktools>
 #include <sdkhooks>
 
-#include "Furien/client.sp"
 //#include "Furien/globals.sp"
-//#include "Furien/natives.sp"
-//#include "Furien/forwards.sp"
+#include "Furien/client.sp"
+#include "Furien/eventhooks.sp"
 
 #define PLUGIN_NAME "FurienMOD for CSGO"
 #define PLUGIN_AUTHOR "ESK0 w/ etc...."
